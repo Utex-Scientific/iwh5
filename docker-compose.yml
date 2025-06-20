@@ -1,0 +1,8 @@
+services:
+  iw-docs:
+    image: iwh5docs
+    container_name: iw-docs
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
