@@ -1,0 +1,32 @@
+name: Build Docs and Export PDF
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+
+    container:
+      image: ghcr.io/utex-scientific/iwh5/docs:latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Start MkDocs Server
+        run: |
+          mkdocs build --site-dir public
+          mkdocs serve -a 0.0.0.0:8000 &
+          sleep 7
+
+      - name: Generate PDF
+        run: python3 print_pdf.py
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: public
+          path: public
