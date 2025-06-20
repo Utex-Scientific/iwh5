@@ -1,7 +1,16 @@
 # IWH5
-abcd
 
+## Docker setup
+Docker Build Command (Locally)
+    docker build -t iwh5docs .
+Run Docker Image
+    docker-compose up
 
+# Update Repo
+
+git add .
+git commit -m "Your message"
+git push
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
