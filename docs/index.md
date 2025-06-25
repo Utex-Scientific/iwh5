@@ -1,5 +1,5 @@
 <figure markdown>
-![IWH5 Title](../assets/images/Graphics/iwh5-title.png){ width="800" }
+![IWH5 Title](assets/images/Graphics/iwh5-title.png){ width="800" }
 </figure>
 
 # Overview
