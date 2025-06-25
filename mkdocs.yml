@@ -105,7 +105,9 @@ nav:
     - Data Structure: IWH5/data-structure/Schema.md
     - Setup JSON Documentation:
       - Samples: IWH5/setup-JSON/Samples.md
-      - Instrument: IWH5/setup-JSON/Instrument.md
+      - Instrument :
+        - Micropulse : IWH5/setup-JSON/MP-Instrument.md
+        - Evident : IWH5/setup-JSON/Evident-Instruments.md
       - Channel: IWH5/setup-JSON/Channel.md
       - Probe Config: IWH5/setup-JSON/Probe_Config.md
       - UT Beamset: IWH5/setup-JSON/UT_Beamset.md
