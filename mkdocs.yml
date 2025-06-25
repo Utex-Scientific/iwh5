@@ -98,7 +98,7 @@ extra:
 
 nav:
   - IWH5:
-    - Home: IWH5/iwh5_index.md 
+    - Home: index.md 
     - Resources: IWH5/getting-started/Resources.md
     - Downloads: IWH5/getting-started/Downloads.md
     - Data File Samples: IWH5/samples/Structures.md
