@@ -97,23 +97,22 @@ extra:
   generator: false
 
 nav:
-  - IWH5:
-    - Home: index.md 
-    - Resources: IWH5/getting-started/Resources.md
-    - Downloads: IWH5/getting-started/Downloads.md
-    - Data File Samples: IWH5/samples/Structures.md
-    - Data Structure: IWH5/data-structure/Schema.md
-    - Setup JSON Documentation:
-      - Samples: IWH5/setup-JSON/Samples.md
-      - Instrument :
+  - Home: index.md 
+  - Resources: IWH5/getting-started/Resources.md
+  - Downloads: IWH5/getting-started/Downloads.md
+  - Data File Samples: IWH5/samples/Structures.md
+  - Data Structure: IWH5/data-structure/Schema.md
+  - Setup JSON Documentation:
+    - Samples: IWH5/setup-JSON/Samples.md
+    - Instrument :
         - Micropulse : IWH5/setup-JSON/MP-Instrument.md
         - Evident : IWH5/setup-JSON/Evident-Instruments.md
-      - Channel: IWH5/setup-JSON/Channel.md
-      - Probe Config: IWH5/setup-JSON/Probe_Config.md
-      - UT Beamset: IWH5/setup-JSON/UT_Beamset.md
-      - TVG: IWH5/setup-JSON/TVG.md
-      - Gate: IWH5/setup-JSON/Gate.md
-      - Scan: IWH5/setup-JSON/Scan.md
-      - Encoder: IWH5/setup-JSON/Encoder.md
+    - Channel: IWH5/setup-JSON/Channel.md
+    - Probe Config: IWH5/setup-JSON/Probe_Config.md
+    - UT Beamset: IWH5/setup-JSON/UT_Beamset.md
+    - TVG: IWH5/setup-JSON/TVG.md
+    - Gate: IWH5/setup-JSON/Gate.md
+    - Scan: IWH5/setup-JSON/Scan.md
+    - Encoder: IWH5/setup-JSON/Encoder.md
 
 
