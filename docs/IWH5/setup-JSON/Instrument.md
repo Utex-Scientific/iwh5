@@ -1,29 +1,59 @@
-# MicroPulse Instrument
-See the [Legend](#legend) for symbol definitions.
+# MicroPulse Instrument Properties
 
-| IW Property Name          | IW Scan Name              | Property Type | Data Type       | Options                                                                                                         | Units | Other Unit Options | Example | Comments                                                            |
-|---------------------------|---------------------------|---------------|-----------------|-----------------------------------------------------------------------------------------------------------------|-------|--------------------|---------|---------------------------------------------------------------------|
-| Name                      |                           | *             | String          |                                                                                                                 |       |                    | MP      |                                                                     |
-|                           |                           |               |                 |                                                                                                                 |       |                    |         |                                                                     |
-| Data Format               |                           | *             | Integer         | 8 Bit, 12 Bit, 16 Bit, 8 Bit Logirathamic                                                                       |       |                    |         |                                                                     |
-| Base Sampling Frequency   | Base Sample Rate          | *             | String          |                                                                                                                 | MHz   |                    | 100     |                                                                     |
-|                           |                           |               |                 |                                                                                                                 |       |                    |         |                                                                     |
-| Ch 0 Pulse Width          | Global Pulse Width: (ns)  | *             | String          |                                                                                                                 | ns    |                    | 100     |                                                                     |
-| Ch 0 Damping              | Global Damping: (Ω)       | *             | Integer         |                                                                                                                 | Ohm   |                    |         |                                                                     |
-| Ch 0 Pulse Voltage        | Global Pulse Voltage: (V) | *             | String          |                                                                                                                 | V     |                    | 200     |                                                                     |
-|                           |                           |               |                 |                                                                                                                 |       |                    |         |                                                                     |
-| PAVoltage                 | Pulse Voltage: (V)        | *             | Integer         |                                                                                                                 | V     |                    |         |                                                                     |
-| PAWidth                   | Pulse Width: (ns)         | *             | Integer         |                                                                                                                 | ns    |                    |         |                                                                     |
-|                           |                           |               |                 |                                                                                                                 |       |                    |         |                                                                     |
-| Use Channel PRFs          | Recurrence                | *             |                 |                                                                                                                 |       |                    |         |                                                                     |
-| Preferred Collection Mode | Collection Mode           | *             | List of strings | Software Trigger, Position Stamped, Trigger on Position, Two Axis Position Stamped, External Tigger on Position |       |                    |         |                                                                     |
-| Channel PRF               | PRF                       | *             | Integer         |                                                                                                                 | Hz    |                    |         |                                                                     |
-|                           |                           |               |                 |                                                                                                                 |       |                    |         |                                                                     |
-| Externally Trigger        |                           | *             | List of strings | None, While Scanning, Always                                                                                    |       |                    |         | If While scanning or always, enables Trigger Line and Trigger Logic |
-| Trigger Line              |                           | D             | Integer         | 0 to 15                                                                                                         |       |                    |         | Depends on Externally Trigger                                       |
-| Trigger Logic             |                           | D             | Integer         | High to Low, Low to High                                                                                        |       |                    |         | Depends on Externally Trigger                                       |
+_See the [Legend](#legend) for symbol definitions._
 
-## Legend
+---
+
+??? info "General"
+
+    | Property                | Type | Data Type | Units | Example |
+    |-------------------------|------|-----------|-------|---------|
+    | Name                    | *    | String    |       | MP      |
+    | Data Format             | *    | Integer   |       |         |
+    | Base Sampling Frequency | *    | String    | MHz   | 100     |
+
+---
+
+??? info "Pulser Settings"
+
+    | Property           | Type | Data Type | Units | Example |
+    |--------------------|------|-----------|-------|---------|
+    | Ch 0 Pulse Width   | *    | String    | ns    | 100     |
+    | Ch 0 Pulse Voltage | *    | String    | V     | 200     |
+    | PAVoltage          | *    | Integer   | V     |         |
+    | PAWidth            | *    | Integer   | ns    |         |
+
+---
+
+??? info "Receiver Settings"
+
+    | Property        | Type | Data Type | Units | Example |
+    |-----------------|------|-----------|-------|---------|
+    | Ch 0 Damping    | *    | Integer   | Ohm   |         |
+
+---
+
+??? info "Collection Mode"
+
+    | Property                  | Type | Data Type       | Units | Example |
+    |---------------------------|------|------------------|-------|---------|
+    | Preferred Collection Mode | *    | List of strings |       |         |
+    | Use Channel PRFs          | *    |                 |       |         |
+    | Channel PRF               | *    | Integer         | Hz    |         |
+
+---
+
+??? info "Triggering"
+
+    | Property           | Type | Data Type       | Units | Example | 
+    |--------------------|------|------------------|-------|---------|
+    | Externally Trigger | *    | List of strings |       |         |
+    | Trigger Line       | D    | Integer         |       |         |
+    | Trigger Logic      | D    | Integer         |       |         |
+
+---
+
+## 🧭 Legend
 
 | Symbol | Meaning         |
 |--------|------------------|
