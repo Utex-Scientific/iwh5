@@ -1,1 +1,9 @@
-Welcome to the official documentation for the IW File Formats. This guide provides a complete overview of our file structures, specifications, usage guidelines, and integration instructions. Whether you're a developer, partner, or internal team member, this resource will help you understand how to create, read, and validate files in our formats efficiently.
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=IWH5/iwh5_index/" />
+  </head>
+  <body>
+    <p>If you are not redirected automatically, follow this <a href="IWH5/iwh5_index/">link</a>.</p>
+  </body>
+</html>

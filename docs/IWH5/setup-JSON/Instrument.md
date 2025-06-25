@@ -1,4 +1,4 @@
-# Instrument
+# MicroPulse Instrument
 See the [Legend](#legend) for symbol definitions.
 
 | IW Property Name          | IW Scan Name              | Property Type | Data Type       | Options                                                                                                         | Units | Other Unit Options | Example | Comments                                                            |

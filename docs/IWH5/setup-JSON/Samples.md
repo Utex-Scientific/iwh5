@@ -1,5 +1,4 @@
-
-
+# Setup JSON Example
 
 ??? info "View setup_json example"
     ```json
@@ -1889,8 +1888,216 @@
     }
 
     ```
+
+# Setup JSON Base Class
+
+??? info "C# Base Class"
+    ``` csharp
+            public class Storage_Setup_Json
+            {
+                public class Collection
+                {
+                    public string dataFileName { get; set; }
+                    public string setupJsonVersion { get; set; }
+                    public string ndtMode { get; set; }
+                    public Software software { get; set; }
+                    public Instrument instrument { get; set; }
+                    public Scan scan { get; set; }
+                    public Motion motion { get; set; }
+                    public Simulation simulation { get; set; }
+                    public Custom custom { get; set; }
+                    public ProcessedData processedData { get; set; }
+            
+                }
+
+                public class Section
+                {
+                    public string sectionName { get; set; }
+                    public List<Props> sectionProps { get; set; }
+                    public List<PropGroup> propGroupList { get; set; }
+                    public List<Table> tableList { get; set; }
+                    public List<Images> images { get; set; }
+                    public List<Section> subsections { get; set; }
+                }
+
+                public class Props
+                {
+                    public string name { get; set; }
+                    public string displayName { get; set; }
+                    public string value { get; set; }
+                    public string units { get; set; }
+                    public string type { get; set; }
+                }
+
+                public class PropGroup
+                {
+                    public List<Props> propList { get; set; }
+                }
+
+                /// <summary>
+                /// ColumnNames and ColumnUnits are comma-seperated,
+                /// Row Items are comma-seperated,
+                /// Rows are semi-colon seperated
+                /// </summary>
+                public class Table
+                {
+                    public string name { get; set; }
+                    public string description { get; set; }
+                    [JsonPropertyName("ColumnNames")]
+                    public string columnNames { get; set; }
+                    public string columnDisplayNames { get; set; }
+                    public string columnUnits { get; set; }
+                    public string tableValues { get; set; }
+                }
+
+                public class Images
+                {
+                    public string reportImageGroupName { get; set; }
+                    public List<ReportImage> imageList { get; set; }
+                    public class ReportImage
+                    {
+                        public string name { get; set; }
+                        public string description { get; set; }
+                        public string base64Image { get; set; }
+                    }
+                }
+
+                /// Setup Report <summary>
+                /// Setup Report
+                ///         
+
+            /// </summary>
+                public class Software
+                {
+                    public List<PropGroup> configuration { get; set; }
+                }
+                public class Instrument
+                {
+                    public List<PropGroup> properties { get; set; }
+                    public List<Channel> channels { get; set; }
+                }
+
+                public class Motion
+                {
+                    public List<MotionAxis> motionAxis { get; set; }
+                }
+                public class Simulation
+                {
+                    public List<PropGroup> properties { get; set; }
+                    public List<Images> images { get; set; }
+                }
+
+                public class Channel
+                {
+                    public List<PropGroup> properties { get; set; }
+                    public ProbeConfiguration probeConfiguration { get; set; }
+                    public UTBeamSet utBeamset { get; set; }
+                    public TimeToDistance timeToDistance { get; set; }
+                    public List<Gates> gates { get; set; }
+
+                    //Optional sections
+                    public TVG tvg { get; set; }
+                    public List<PreProcessors> preProcessors { get; set; }
+
+                }
+
+                public class ProbeConfiguration
+                {
+                    public List<PropGroup> properties { get; set; }
+                    public List<Table> tables { get; set; }
+                }
+
+                public class UTBeamSet
+                {
+                    public List<PropGroup> properties { get; set; }
+                    public Table focalLawTable { get; set; }
+                }
+
+                public class TimeToDistance
+                {
+                    public List<PropGroup> properties { get; set; }
+                }
+
+                public class TVG
+                {
+                    public List<PropGroup> properties { get; set; }
+                    public List<Table> table { get; set; }
+                }
+
+                public class PreProcessors
+                {
+                    public List<PropGroup> properties { get; set; }
+                }
+
+                public class Gates
+                {
+                    public List<PropGroup> properties { get; set; }
+                    public List<PropGroup> amplitude { get; set; }
+                    public List<PropGroup> timeOfFlight { get; set; }
+                    public List<PropGroup> alarm { get; set; }
+                }
+
+                public class Scan
+                {
+                    public List<PropGroup> properties { get; set; }
+                    public List<PropGroup> header { get;set; }
+                    public List<Table> table { get; set; }
+                }
+
+                public class MotionAxis
+                {
+                    public List<PropGroup> properties { get; set; }
+                    public List<PropGroup> motor { get; set; }
+                    public List<Encoders> encoders { get; set; }
+                }
+
+                public class Encoders
+                {
+                    public List<PropGroup> properties { get; set; }
+                }
+
+                public class Custom
+                {
+                    public List<Section> sections { get; set; }
+                }
+
+                public class ProcessedData
+                {
+                    List<ProcessedSubset1D> processedSubset1D { get; set; }
+                    List<ProcessedSubset2D> processedSubset2D { get; set; }
+                    List<ProcessedSubset3D> processedSubset3D { get; set; }
+
+                }
+                
+                public class ProcessedSubset1D
+                {
+                    List<PropGroup> Processors { get; set; }
+                }
+
+                public class ProcessedSubset2D
+                {
+                    List<PropGroup> Processors { get; set; }
+                }
+
+                public class ProcessedSubset3D
+                {
+                    List<PropGroup> processors { get; set; }
+                    List<Gates> gates { get; set; }
+                }
+
+                public class Processors
+                {
+                    List<Props> props { get; set; }
+                }
+            }
+    
+
+    ```
+
+<!--
 <figure markdown>
 <figcaption>IWH5 UT Sample Setup JSON Outline</figcaption>
-![Sample UT setup JSON Outline](../../assets/images/Samples/setup_json_outline_1.png){ width="800" } 
+![Sample UT setup JSON Outline](../../assets/images/Samples/setup_json_outline_1.png){ width="800" }
 ![Sample UT setup JSON Outline](../../assets/images/Samples/setup_json_outline_2.png){ width="800" }
 </figure>
+-->
