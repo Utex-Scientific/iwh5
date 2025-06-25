@@ -59,7 +59,7 @@ _See the [Legend](#legend) for symbol definitions._
 
 ## 🧭 Legend
 
-| Symbol | Meaning         |
+| Symbol | Definition       |
 |--------|------------------|
 | *      | Required         |
 | O      | Optional         |
