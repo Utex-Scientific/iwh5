@@ -1,59 +1,72 @@
-# Device Encoder
+# Micropulse Device Encoder
 
 _See the [Legend](#legend) for symbol definitions._
 
 ---
 
-## General
-
-| Property | Type | Data Type | Example |
-| -------- | ---- | --------- | ------- |
-| Name     | *    | String    |         |
-
 ## Encoder Settings
 
-| Property     | Type | Data Type | Options                    | Units | Example |
-| ------------ | ---- | --------- | -------------------------- | ----- | ------- |
-| Channel      | *    | Integer   |                            |       |         |
-| Encoder Mode | *    | String    | Quadrature, Step/Direction |       |         |
+| IW Property Name | Property Type | Data Type | Options                    |
+|------------------|---------------|-----------|----------------------------|
+| Name             | *             | String    |                            |
+| Channel          | *             | Integer   |                            |
+| Encoder Mode     | *             | String    | Quadrature, Step/Direction |
 
-## Calibration / Setup
+## Calibration/Setup
 
-| Property          | Type | Data Type       | Options      | Units    | Example | Comments                              |
-| ----------------- | ---- | --------------- | ------------ | -------- | ------- | ------------------------------------- |
-| Modulus Enabled   | *    | Boolean         |              |          |         |                                       |
-| Rollover At       | D    | Double          |              |          |         | Dependent on Modulus Enabled          |
-| Measure per Step  | *    | Double          |              | mm/step  |         |                                       |
-| Steps per Measure | A    | Double          |              | steps/mm |         | Auto Calculated from Measure per Step |
-| Calibration Units | *    | List of strings | mm, deg      |          |         |                                       |
-| Channel           | *    | Integer         | X–H (X,Y,Z…) |          |         |                                       |
+| IW Property Name  | Property Type | Data Type       | Options         | Units    |
+|-------------------|---------------|-----------------|-----------------|----------|
+| Modulus Enabled   | *             | Boolean         |                 |          |
+| Rollover At       | D             | Double          |                 |          |
+| Measure per Step  | *             | Double          |                 | mm/step  |
+| Steps per Measure | A             | Double          |                 | steps/mm |
+| Calibration Units | *             | List of strings | mm, deg         |          |
+| Channel           | *             | Integer         | X,Y,Z,W,E,F,G,H |          |
+
+### Comments
+
+| IW Property Name  | Comments                              |
+|-------------------|---------------------------------------|
+| Rollover At       | Dependent on Modulus Enabled          |
+| Measure per Step  |                                       |
+| Steps per Measure | Auto Calculated from Measure per Step |
+| Reset Input Line  | Available if Hardware Modulus Enabled |
+| Rising Edge       | Available if Hardware Modulus Enabled |
 
 ## Hardware
 
-| Property         | Type | Data Type | Example | Comments                              |
-| ---------------- | ---- | --------- | ------- | ------------------------------------- |
-| Hardware Modulus | *    | Boolean   |         |                                       |
-| Reset Input Line | *    | Integer   |         | Available if Hardware Modulus Enabled |
-| Rising Edge      | *    | Boolean   |         | Available if Hardware Modulus Enabled |
-| Terminated       | *    | Boolean   |         |                                       |
-| Encoder Filter   | *    | Integer   |         | Available if Terminated Enabled       |
-| Pulse Divider    | *    | Integer   |         | Available if Terminated Enabled       |
-| Backlash Period  | *    | Float     |         | Available if Terminated Enabled       |
+| IW Property Name | IW Scan Name            | Property Type | Data Type | Units |
+|------------------|-------------------------|---------------|-----------|-------|
+| Hardware Modulus | Hardware Encoder Reset: | *             | Boolean   |       |
+| Reset Input Line |                         | *             | Integer   |       |
+| Rising Edge      |                         | *             | Boolean   |       |
+| Terminated       |                         | *             | Boolean   |       |
+| Encoder Filter   |                         | *             | Integer   |       |
+| Pulse Divider    |                         | *             | Integer   |       |
+| Backlash Period  |                         | *             | Float     | s     |
+
+### Comments
+
+| IW Property Name | Comment                         |
+|------------------|---------------------------------|
+| Encoder Filter   | Available if Terminated Enabled |
+| Pulse Divider    | Available if Terminated Enabled |
+| Backlash Period  | Available if Terminated Enabled |
 
 ## Measured Speed
 
-| Property              | Type | Data Type | Units | Example |
-| --------------------- | ---- | --------- | ----- | ------- |
-| Encoder               | *    | Double    |       |         |
-| Minimum Time Interval | *    | Double    | s     |         |
-| Conversion Factor     | *    | Double    |       |         |
+| IW Property Name      | IW Scan Name         | Property Type | Data Type | Units |
+|-----------------------|----------------------|---------------|-----------|-------|
+| Encoder               |                      | *             | Double    |       |
+| Minimum Time Interval | Update Interval: (s) | *             | Double    | s     |
+| Conversion Factor     |                      | *             | Double    |       |
 
 ---
 
 ## 🧭 Legend
 
 | Symbol | Definition      |
-| ------ | --------------- |
+|--------|-----------------|
 | *      | Required        |
 | O      | Optional        |
 | A      | Auto Calculated |
