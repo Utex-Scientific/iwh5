@@ -22,7 +22,7 @@ _See the [Legend](#legend) for symbol definitions._
 
 | IW Property Name | Comment                          |
 |------------------|----------------------------------|
-| Focus Law        | In setup json as a focalLawTable |
+| Focal Law        | In setup json as a focalLawTable |
 | Focus Type       | Example: Path                    |
 
 ---
