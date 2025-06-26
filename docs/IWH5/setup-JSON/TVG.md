@@ -29,6 +29,12 @@ _See the [Legend](#legend) for symbol definitions._
 | 2nd Gain         | Gain                                | D             | Double    | dB             |         | Available if 2nd Gain enabled          |
 | MAC              | Material Amplitude Correction (MAC) | D             | Double    | dB/us or dB/mm |         | Available if Advanced TVG Mode enabled |
 
+### Comments
+
+| IW Property Name | Comment|
+| --- | -- |
+| Active Width | Available if Advanced TVG Mode enabled |
+
 ---
 
 ## 🧭 Legend
