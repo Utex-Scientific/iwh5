@@ -3,7 +3,7 @@
 - Get the Sample data files  
 - Get the python code (`read_iwh5.py`)  
 
-[https://cloud.utex.com/url/iwh5](https://cloud.utex.com/url/iwh5)
+[Link for Download](https://support.utex.com/webapps/utexsupport.nsf/wPages/MSZI-DHYQSS2600?Open)
 
 # From HDF Group website
 
