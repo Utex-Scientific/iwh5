@@ -1,7 +1,6 @@
 # From Utex Support Pages
 
 - Get the Sample data files  
-- Get the python code (`read_iwh5.py`)  
 
 [Link for Download](https://support.utex.com/webapps/utexsupport.nsf/wPages/MSZI-DHYQSS2600?Open)
 
